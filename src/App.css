@@ -1,0 +1,75 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  background: linear-gradient(to right, #0f0f0f, rgb(8, 28, 95))
+}
+
+h1 {
+  color: white;
+  font-size: 6rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.campo-minado-grid {
+  display: grid;
+  margin-top: 2rem;
+  justify-content: center;
+  grid-template-columns: repeat(6,6rem);
+  grid-template-rows: repeat(6,6rem);
+  height: 100vh;
+  box-shadow: 4px 4px 8px rgba(0,0,0,2);
+}
+
+.campo-minado-grid button {
+  background-color: rgb(238, 240, 241);
+  color: rgb(12, 5, 5);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-emphasis-color: black;
+  font-size: 2.2rem;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px rgba(0,0,0, 0.2);
+}
+
+.campo-minado-grid button:active {
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  transform: translate(2px, 2px);
+}
+
+.campo-minado-grid button:hover {
+  background-color: rgb(136, 154, 170);
+}
+
+.square.explode {
+  animation: explode 1s forwards;
+}
+
+@keyframes explode {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(-50px) rotate(180deg); opacity: 1; }
+  100% { transform: translateY(200px) rotate(360deg); opacity: 0; }
+}
+
+#luva {
+  position: fixed;          /* fixa na tela */
+  bottom: 0;                /* começa na parte de baixo */
+  left: 50%;                /* centraliza horizontalmente */
+  transform: translateX(-50%); /* centraliza exatamente */
+  width: 200vw;              /* ocupa 90% da largura da tela */
+  height: 90vh;
+  z-index: 1001;            /* acima da grade do jogo e chuva de bombas */
+}

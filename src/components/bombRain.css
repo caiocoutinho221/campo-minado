@@ -1,0 +1,24 @@
+.bomb-rain-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* permite clicar nos botões abaixo */
+  overflow: hidden;
+  z-index: 1002;
+}
+
+.bomb {
+  position: absolute;
+  top: -2rem;
+  font-size: 2rem;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(720deg); }
+}
