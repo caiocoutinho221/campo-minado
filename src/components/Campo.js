@@ -49,7 +49,7 @@ export function contaMinasProximas(matriz, linha, col) {
     let linhas_length = matriz.length
     let colun_lenght = matriz[0].length
 
-    let possiveis_posicoes = [{x: 0, y: -1}, {x: -1, y: 0}, {x: -1, y: -1}, {x: 1, y: 0}, {x: 1, y: 1}, {x: 0, y: 1}]
+    let possiveis_posicoes = [{x: 0, y: -1}, {x: -1, y: 0}, {x: -1, y: -1}, {x: 1, y: 0}, {x: 1, y: 1}, {x: 0, y: 1}, {x: -1, y: 1}, {x: 1, y: -1}]
     let contadorMinas = 0
 
     for(let ele of possiveis_posicoes) {
