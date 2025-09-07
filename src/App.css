@@ -27,9 +27,8 @@ h2 {
   display: grid;
   margin-top: 2rem;
   justify-content: center;
-  grid-template-columns: repeat(6,6rem);
-  grid-template-rows: repeat(6,6rem);
-  height: 100vh;
+  grid-template-columns: repeat(10,4rem);
+  grid-template-rows: repeat(10,4rem);
   box-shadow: 4px 4px 8px rgba(0,0,0,2);
 }
 
@@ -38,7 +37,7 @@ h2 {
   color: rgb(12, 5, 5);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-emphasis-color: black;
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
   cursor: pointer;
