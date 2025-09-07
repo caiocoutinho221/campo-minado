@@ -17,6 +17,11 @@ function BombRain({ active, count = 20 }) {
     setBombs(newBombs);
   }, [active, count]);
 
+  const handleAnimationEnd = ((id) => {
+        setBombs((prev) => prev.filter((b) => b.id !== id));
+
+  })
+
   return (
     <div className="bomb-rain-container">
       {bombs.map((b) => (
@@ -28,6 +33,8 @@ function BombRain({ active, count = 20 }) {
             animationDelay: `${b.delay}s`,
             animationDuration: `${b.duration}s`,
           }}
+
+          onAnimationEnd={() => handleAnimationEnd(b.id)}
         >
           💣
         </span>
